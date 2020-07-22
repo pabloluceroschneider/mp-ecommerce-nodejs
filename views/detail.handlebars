@@ -1,5 +1,10 @@
 
 <div class="as-search-wrapper" role="main">
+    <script>
+        function post_payment(unit, price, title){
+            console.log("hola", unit, price, title)
+        }
+    </script>
     <div class="as-navtuck-wrapper">
         <div class="as-l-fullwidth  as-navtuck" data-events="event52">
             <div>
@@ -84,7 +89,7 @@
                                     {{ unit }}
                                 </h3>
                             </div>
-                            <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                            <button onclick="post_payment({{unit}},{{price}},'{{title}}')" type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
                         </div>
                     </div>
                 </div>
